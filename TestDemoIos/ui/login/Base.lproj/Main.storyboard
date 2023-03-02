@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JTe-v5-lOw">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -48,13 +48,65 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XuN-OT-Yvc" secondAttribute="trailing" constant="76" id="m15-SO-zxK"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Gp6-Kk-puz"/>
                     <connections>
                         <outlet property="btnLoginT" destination="8eI-oP-Wsl" id="D6S-R1-zpF"/>
                         <outlet property="editEmailTest" destination="XuN-OT-Yvc" id="yPv-Tz-4iP"/>
                         <outlet property="editPassT" destination="xCT-Xr-Pvn" id="bXN-KM-7aM"/>
+                        <segue destination="KXk-17-MYb" kind="show" identifier="enviar" id="cn8-L6-Mf9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1028.2442748091603" y="3.5211267605633805"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="cBr-at-W9S">
+            <objects>
+                <viewController id="KXk-17-MYb" customClass="HomeViewController" customModule="TestDemoIos" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DJA-fl-nQB">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BrB-1Z-vDX">
+                                <rect key="frame" x="100" y="122.99999999999999" width="193" height="20.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Uab-J3-DgE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Uab-J3-DgE" firstAttribute="trailing" secondItem="BrB-1Z-vDX" secondAttribute="trailing" constant="100" id="Bxd-ND-79w"/>
+                            <constraint firstItem="BrB-1Z-vDX" firstAttribute="top" secondItem="Uab-J3-DgE" secondAttribute="top" constant="20" id="Rdz-um-YSi"/>
+                            <constraint firstItem="BrB-1Z-vDX" firstAttribute="leading" secondItem="Uab-J3-DgE" secondAttribute="leading" constant="100" id="i8T-Vc-AyK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="mAC-an-hbQ"/>
+                    <connections>
+                        <outlet property="nameUserT" destination="BrB-1Z-vDX" id="6qZ-pE-qID"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rhe-jZ-JsN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1820.6106870229007" y="3.5211267605633805"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="YIH-Tn-f2G">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JTe-v5-lOw" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OLc-U8-1Mc">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Mjr-Bm-0bI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YFf-Ue-ktz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="101.5267175572519" y="3.5211267605633805"/>
         </scene>

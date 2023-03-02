@@ -18,8 +18,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        editEmailTest.text = "Gabbi1208@gmail.com"
+        editPassT.text = "Gabbi1208"
         setBacgroundRoundEdit()
-        
     }
 
 
@@ -30,10 +31,18 @@ class ViewController: UIViewController {
         }else{
             success = validEmailFormat()
             success = validPasswordFormat()
-            if(success){showAlert("Datos validos")}
+            if(success){
+            
+                performSegue(withIdentifier: "enviar", sender:self)
+            }
         }
-        
+    }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "enviar" {
+            let objDestino = segue.destination as!HomeViewController
+            objDestino.nameUser = "Gabriela"
+        }
     }
     
     func validEmailFormat() ->Bool{
